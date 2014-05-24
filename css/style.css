@@ -1,0 +1,111 @@
+/*
+    Studio Tracker
+    Author: Eric Rogers
+*/
+
+/*--- site wide styles --*/
+body {
+    background: #333;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    background-image: url("../images/cubes.png");
+    padding: 0 0 30px 0;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-family: 'Allerta', sans-serif;
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #7EB8E8),
+            color-stop(0.3, #3070A9)
+    );
+    background-image: -o-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: -moz-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: -webkit-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: -ms-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: linear-gradient(to bottom, #7EB8E8 0%, #3070A9 30%);    color: #fff;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+h2 {
+    text-align: center;
+    color: #3070A9;
+}
+
+/*-- spacer */
+.spacer {
+    height: 30px;
+}
+
+/*--- page forms --*/
+form {
+    padding: 10px;
+    margin: 0 10px 0 30px;
+    width: 400px;
+    float: left;
+    border: 3px solid #3070A9;
+    border-radius: 10px;
+    background: #fff;
+}
+
+legend {
+    color: #4d4d4d;
+}
+
+label {
+    color: #4d4d4d;
+}
+
+.form-control {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0.4, #FFFFFF),
+            color-stop(1, #CBECF2)
+    );
+    background-image: -o-linear-gradient(bottom, #FFFFFF 40%, #CBECF2 100%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 40%, #CBECF2 100%);
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 40%, #CBECF2 100%);
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 40%, #CBECF2 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 40%, #CBECF2 100%);
+}
+
+.form-control:hover {
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+
+}
+
+/*-- listing boxes --*/
+ul {
+    margin-left: 40px;
+}
+
+li{
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
+}
+
+.list-group button {
+    float: right;
+}
+
+.glyphicon-user {
+    margin-right: 5px;
+}
+
+.close:hover {
+    color: red;;
+}

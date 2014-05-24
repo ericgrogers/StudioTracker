@@ -1,0 +1,56 @@
+<!-- Studio Tracker
+    Author: Eric Rogers -->
+
+<nav class="col-md-5">
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#/view1/Clients">Clients</a></li>
+        <li><a href="#/view2/Projects">Projects</a></li>
+        <li><a href="#/view3/Team">Team</a></li>
+    </ul>
+
+</nav>
+
+<h2 class="col-md-6">{{ page }} Directory</h2>
+
+<div class="spacer"></div> <!-- spacer -->
+
+<form name="clients_form" class="col-md-4"> <!-- start of the Clients form -->
+    <fieldset>
+        <legend>Add a Client</legend>
+        <div class="form-group">
+            <label for="name">Client Name:</label>
+            <input type="text" class="form-control" id="name" ng-model="name" placeholder="Client Name" required>
+        </div>
+        <div class="form-group">
+            <label for="street">Street:</label>
+            <input type="text" class="form-control" id="street" ng-model="street" placeholder="Street" required>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" id="city" ng-model="city" placeholder="City" required>
+        </div>
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" class="form-control" id="state" ng-model="state" placeholder="State"required>
+        </div>
+        <div class="form-group">
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" class="form-control" id="zipCode" ng-model="zipCode" placeholder="Zip Code"required>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="addClient()">Add</button>
+    </fieldset>
+</form> <!-- end of clients form -->
+
+<div class="spacer"></div> <!-- spacer -->
+
+<ul class="list-group col-md-3" ng-repeat="client in clients track by $index"> <!-- start of the client listing -->
+    <li class="list-group-item list-group-item-info">
+        <span class="glyphicon glyphicon-user"></span>
+        {{ client.name }}
+        <button type="button" class="close" aria-hidden="true" ng-click="deleteClient(client)">&times;</button>
+    </li>
+    <li class="list-group-item text-primary">
+        <p>{{ client.street }}</p>
+        <p>{{ client.city }}, {{ client.state }} {{ client.zipCode }}</p>
+    </li>
+</ul> <!-- end of the client listing -->

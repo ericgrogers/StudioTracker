@@ -1,0 +1,44 @@
+<!-- Studio Tracker
+    Author: Eric Rogers -->
+
+<nav class="col-md-5">
+    <ul class="nav nav-pills">
+        <li><a href="#/view1/Clients">Clients</a></li>
+        <li class="active"><a href="#/view2/Projects">Projects</a></li>
+        <li><a href="#/view3/Team">Team</a></li>
+    </ul>
+
+</nav>
+
+<h2 class="col-md-6">{{ page }} Directory</h2>
+
+<div class="spacer"></div> <!-- spacer -->
+
+<form name="projects_form" class="col-md-4"> <!-- start of the Projects form -->
+    <fieldset>
+        <legend>Add a Project</legend>
+        <div class="form-group">
+            <label for="pName">Project Name:</label>
+            <input type="text" class="form-control" id="pName" ng-model="pName" placeholder="Project Name" required>
+        </div>
+        <div class="form-group">
+            <label for="pDescription">Description:</label>
+            <textarea class="form-control" id="pDescription" rows="3"
+                      ng-model="pDescription" placeholder="Description" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="addProject()">Add</button>
+    </fieldset>
+</form> <!-- end of Projects form -->
+
+<div class="spacer"></div> <!-- spacer -->
+
+<ul class="list-group col-md-3" ng-repeat="project in projects track by $index"> <!-- start of the projects listing -->
+    <li class="list-group-item list-group-item-info">
+        <span class="glyphicon glyphicon-tasks"></span>
+        {{ project.pName }}
+        <button type="button" class="close" aria-hidden="true" ng-click="deleteProject(project)">&times;</button>
+    </li>
+    <li class="list-group-item text-primary">
+        <p>{{ project.pDescription }}</p>
+    </li>
+</ul> <!-- end of the projects listing -->

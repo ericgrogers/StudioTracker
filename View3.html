@@ -1,0 +1,41 @@
+<!-- Studio Tracker
+    Author: Eric Rogers -->
+
+<nav class="col-md-5">
+    <ul class="nav nav-pills">
+        <li><a href="#/view1/Clients">Clients</a></li>
+        <li><a href="#/view2/Projects">Projects</a></li>
+        <li class="active"><a href="#/view3/Team">Team</a></li>
+    </ul>
+
+</nav>
+
+<h2 class="col-md-6">{{ page }} Directory</h2>
+
+<div class="spacer"></div> <!-- spacer -->
+
+<form name="teamMember_form"  class="col-md-4"> <!-- start of the Team Member form -->
+    <fieldset>
+        <legend>Add a Team Member</legend>
+        <div class="form-group">
+            <label for="name">Team Member Name:</label>
+            <input type="text" class="form-control" id="name" ng-model="name" placeholder="Team Member Name" required>
+        </div>
+        <div class="form-group">
+            <label for="job">Position:</label>
+            <input type="text" class="form-control" id="job" ng-model="job" placeholder="Position" required>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="addTeamMember()">Add</button>
+    </fieldset>
+</form> <!-- end of Team Member form -->
+
+<ul class="list-group col-md-3" ng-repeat="name in teamMembers track by $index"> <!-- start of team member listings -->
+    <li class="list-group-item list-group-item-info">
+        <span class="glyphicon glyphicon-user"></span>
+        {{ name.name }}
+        <button type="button" class="close" aria-hidden="true" ng-click="deleteTeamMember(name)">&times;</button>
+    </li>
+    <li class="list-group-item text-primary">
+        <p>{{ name.job}}</p>
+    </li>
+</ul> <!-- end of team member listings -->
