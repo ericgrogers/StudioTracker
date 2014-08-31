@@ -93,7 +93,7 @@ label {
     margin-top: 20px;
     margin-left: 40px;
     float: left;
-    min-width: 260px;
+    width: 260px;
 }
 
 li{
