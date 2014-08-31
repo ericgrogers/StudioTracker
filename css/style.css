@@ -7,7 +7,7 @@
 body {
     /*background: linear-gradient(rgba(0,0,0,0) 60%, rgba(25,25,25,1)), url(../images/dark_fish_skin.png);*/
     font-family: 'Source Sans Pro', sans-serif;
-    background: linear-gradient(#fff 50%, #999);
+    background: linear-gradient(rgba(255,255,255,0.8) 50%, rgba(200,200,200,.5)), url(../images/noise_bg.png);
 }
 
 .container {
