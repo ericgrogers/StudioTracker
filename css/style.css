@@ -31,12 +31,11 @@ nav {
 }
 
 .navbar-brand {
-    
+    width: 200px;
     text-align: center;
 }
 
 #branding {
-    width: 25%;
     color: #3070A9;
     font-size: 2em;
 }
@@ -93,7 +92,7 @@ ul {
     margin-top: 20px;
     margin-left: 40px;
     float: left;
-    min-width: 290px;
+    min-width: 260px;
 }
 
 li{
@@ -112,16 +111,5 @@ li{
 }
 
 .close:hover {
-    color: red;
-}
-
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) 
-and (orientation : portrait) { 
-
-   #branding {
-   font-size: 1em;
-   }
-
+    color: red;;
 }
