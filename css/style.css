@@ -19,16 +19,12 @@ body {
 }
 
 header {
-    height: 80px;
-    display: block;
-    background: rgba(200,200,200,0.4);
-}
-
-.navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    height: 80px;
+    display: block;
+    background: rgba(200,200,200,0.4);
 }
 
 .navbar-brand {
