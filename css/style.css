@@ -31,11 +31,12 @@ nav {
 }
 
 .navbar-brand {
-    width: 25%;
+    
     text-align: center;
 }
 
 #branding {
+    width: 25%;
     color: #3070A9;
     font-size: 2em;
 }
