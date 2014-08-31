@@ -114,7 +114,7 @@ li{
     color: red;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 640px) {
 
    .navbar-brand {
    font-size: 1em;
