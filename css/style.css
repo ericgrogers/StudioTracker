@@ -25,6 +25,7 @@ header {
     height: 80px;
     display: block;
     background: rgba(200,200,200,0.4);
+    z-index: 1000;
 }
 
 .navbar-brand {
