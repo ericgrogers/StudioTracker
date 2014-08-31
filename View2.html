@@ -1,17 +1,31 @@
 <!-- Studio Tracker
     Author: Eric Rogers -->
+<header>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="branding" href="#">Studio Tracker</a>
+    </div>
 
-<nav class="col-md-5">
-    <ul class="nav nav-pills">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
         <li><a href="#/view1/Clients">Clients</a></li>
         <li class="active"><a href="#/view2/Projects">Projects</a></li>
         <li><a href="#/view3/Team">Team</a></li>
     </ul>
-
+    <h2 class="col-md-5">{{ page }} Directory</h2>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
-
-<h2 class="col-md-6">{{ page }} Directory</h2>
-
+</header>
 <div class="spacer"></div> <!-- spacer -->
 
 <form name="projects_form" class="col-md-4"> <!-- start of the Projects form -->
