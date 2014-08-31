@@ -11,15 +11,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" id="branding" href="#">Studio Tracker</a>
+      <a class="navbar-brand glyphicon glyphicon-home" id="branding" href="#"> Studio Tracker</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#/view1/Clients">Clients</a></li>
-        <li><a href="#/view2/Projects">Projects</a></li>
-        <li><a href="#/view3/Team">Team</a></li>
+        <li class="active "><a class="glyphicon glyphicon-user" href="#/view1/Clients"> Clients</a></li>
+        <li><a class="glyphicon glyphicon-folder-open" href="#/view2/Projects"> Projects</a></li>
+        <li><a class="glyphicon glyphicon-info-sign" href="#/view3/Team"> Team</a></li>
     </ul>
     <h2>{{ page }} Directory</h2>
     </div><!-- /.navbar-collapse -->
@@ -50,12 +50,11 @@
             <label for="zipCode">Zip Code:</label>
             <input type="text" class="form-control" id="zipCode" ng-model="zipCode" placeholder="Zip Code"required>
         </div>
-        <button type="submit" class="btn btn-primary" ng-click="addClient()">Add</button>
+        <button id="submit" type="submit" class="btn btn-warning " ng-click="addClient()">Add <span class="glyphicon glyphicon-plus-sign"></span></button>
     </fieldset>
 </form> <!-- end of clients form -->
 
-<div class="spacer"></div> <!-- spacer -->
-
+<div id="listing">
 <ul class="list-group col-md-3" ng-repeat="client in clients track by $index"> <!-- start of the client listing -->
     <li class="list-group-item list-group-item-info">
         <span class="glyphicon glyphicon-user"></span>
@@ -67,3 +66,4 @@
         <p>{{ client.city }}, {{ client.state }} {{ client.zipCode }}</p>
     </li>
 </ul> <!-- end of the client listing -->
+</div>

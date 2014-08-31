@@ -37,7 +37,7 @@ nav {
 
 #branding {
     color: #3070A9;
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 h2 {
@@ -88,7 +88,8 @@ label {
 }
 
 /*-- listing boxes --*/
-ul {
+
+ #listing ul {
     margin-top: 20px;
     margin-left: 40px;
     float: left;
@@ -113,3 +114,16 @@ li{
 .close:hover {
     color: red;;
 }
+
+#submit {
+    height: 40px;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+@media screen and (min-device-width : 768px){
+    h2 {
+        visibility: hidden;
+    }
+} 
+
