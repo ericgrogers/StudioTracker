@@ -27,6 +27,10 @@ header {
     background: rgba(200,200,200,0.4);
 }
 
+.navbar {
+    z-index: 1000;
+}
+
 .navbar-brand {
     width: 250px;
     text-align: center;
