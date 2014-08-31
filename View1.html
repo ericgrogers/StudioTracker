@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active "><a class="glyphicon glyphicon-user" href="#/view1/Clients"> Clients</a></li>
-        <li><a class="glyphicon glyphicon-folder-open" href="#/view2/Projects"> Projects</a></li>
+        <li><a class="glyphicon glyphicon-file" href="#/view2/Projects"> Projects</a></li>
         <li><a class="glyphicon glyphicon-info-sign" href="#/view3/Team"> Team</a></li>
     </ul>
     <h2>{{ page }} Directory</h2>
@@ -50,7 +50,7 @@
             <label for="zipCode">Zip Code:</label>
             <input type="text" class="form-control" id="zipCode" ng-model="zipCode" placeholder="Zip Code"required>
         </div>
-        <button id="submit" type="submit" class="btn btn-warning " ng-click="addClient()">Add <span class="glyphicon glyphicon-plus-sign"></span></button>
+        <button id="submit" type="submit" class="btn btn-primary" ng-click="addClient()">Add <span class="glyphicon glyphicon-plus"></span></button>
     </fieldset>
 </form> <!-- end of clients form -->
 

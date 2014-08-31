@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <ul class="nav navbar-nav">
         <li><a class="glyphicon glyphicon-user" href="#/view1/Clients"> Clients</a></li>
-        <li class="active"><a class="glyphicon glyphicon-folder-open" href="#/view2/Projects"> Projects</a></li>
+        <li class="active"><a class="glyphicon glyphicon-file" href="#/view2/Projects"> Projects</a></li>
         <li><a class="glyphicon glyphicon-info-sign" href="#/view3/Team"> Team</a></li>
     </ul>
     <h2>{{ page }} Directory</h2>
@@ -40,13 +40,13 @@
             <textarea class="form-control" id="pDescription" rows="3"
                       ng-model="pDescription" placeholder="Description" required></textarea>
         </div>
-        <button id="submit" type="submit" class="btn btn-warning" ng-click="addProject()">Add <span class="glyphicon glyphicon-plus-sign"></span></button>
+        <button id="submit" type="submit" class="btn btn-primary" ng-click="addProject()">Add <span class="glyphicon glyphicon-plus"></span></button>
     </fieldset>
 </form> <!-- end of Projects form -->
 <div id="listing">
 <ul class="list-group col-md-3" ng-repeat="project in projects track by $index"> <!-- start of the projects listing -->
     <li class="list-group-item list-group-item-info">
-        <span class="glyphicon glyphicon-tasks"></span>
+        <span class="glyphicon glyphicon-file"></span>
         {{ project.pName }}
         <button type="button" class="close" aria-hidden="true" ng-click="deleteProject(project)">&times;</button>
     </li>

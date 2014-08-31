@@ -7,7 +7,7 @@
 body {
     /*background: linear-gradient(rgba(0,0,0,0) 60%, rgba(25,25,25,1)), url(../images/dark_fish_skin.png);*/
     font-family: 'Source Sans Pro', sans-serif;
-    background: rgba(0,0,0,0.8);
+    background: linear-gradient(#fff 50%, #999);
 }
 
 .container {
@@ -15,7 +15,7 @@ body {
     margin-top: 100px;
     padding: 0 0 30px 0;
     border-radius: 5px;
-    background: linear-gradient(rgba(0,0,0,0) 60%, rgba(30,30,30,1)), url(../images/dark_fish_skin.png);
+    box-shadow: 0 3px 5px #999;
 }
 
 header {
@@ -24,13 +24,8 @@ header {
     width: 100%;
     height: 80px;
     display: block;
-    background: url(../images/tactile_noise.png);
+    background: rgba(200,200,200,0.4);
     z-index: 500;
-    box-shadow: 0 2px 10px #000
-}
-
-nav {
-    margin-top: 20px;
 }
 
 .navbar-brand {
@@ -99,13 +94,6 @@ label {
     width: 284px;
 }
 
-li{
-    background: rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
-    -moz-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
-    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
-}
-
 .list-group button {
     float: right;
 }
@@ -122,12 +110,14 @@ li{
     height: 40px;
     width: 100%;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 footer p {
     color: #fff;
     text-align: center;
     line-height: 2;
+    background: #4d4d4d;
 }
 
 @media (max-width: 768px){
