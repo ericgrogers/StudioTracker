@@ -29,19 +29,19 @@ header {
 }
 
 .navbar-brand {
-    width: 250px;
+    width: 270px;
     text-align: center;
 }
 
 #branding {
     color: #3070A9;
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
 h2 {
-    margin-top: 10px;
-    font-size: 1.75em;
+    margin-top: 15px;
+    font-size: 1.3em;
     height: 20px;
     text-align: center;
     color: #3070A9;
