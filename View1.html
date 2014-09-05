@@ -3,7 +3,36 @@
 
 <!--=========== Clients View ==========-->
 
+<<<<<<< HEAD
 <div id="header" data-ng-include data-src="'partials/header.html'"></div>
+=======
+<form name="clients_form" class="col-md-4"> <!-- start of the Clients form -->
+    <fieldset>
+        <legend>Add a Client</legend>
+        <div class="form-group">
+            <label for="name">Client Name:</label>
+            <input type="text" class="form-control" id="name" ng-model="name" placeholder="Client Name" required>
+        </div>
+        <div class="form-group">
+            <label for="street">Street:</label>
+            <input type="text" class="form-control" id="street" ng-model="street" placeholder="Street" required>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" class="form-control" id="city" ng-model="city" placeholder="City" required>
+        </div>
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" class="form-control" id="state" ng-model="state" placeholder="State"required>
+        </div>
+        <div class="form-group">
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" class="form-control" id="zipCode" ng-model="zipCode" placeholder="Zip Code"required>
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary" ng-click="addClient()">Add <span class="glyphicon glyphicon-plus"></span></button>
+    </fieldset>
+</form> <!-- end of clients form -->
+>>>>>>> parent of 261ec90... Changing the layout slightly
 
 <div id="sidebar" col-md-3 data-ng-include data-src="'partials/sidebar.html'"></div>
 
