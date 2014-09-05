@@ -5,52 +5,53 @@
 
 /*--- site wide styles --*/
 body {
-    /*background: linear-gradient(rgba(0,0,0,0) 60%, rgba(25,25,25,1)), url(../images/dark_fish_skin.png);*/
+    background: #333;
     font-family: 'Source Sans Pro', sans-serif;
-    background: linear-gradient(rgba(255,255,255,0.6) 50%, rgba(217,237,247,0.8)), url(../images/noise_bg.png);
 }
 
 .container {
-    width: 100%;
-    margin-top: 100px;
+    max-width: 960px;
+    margin: 30px auto;
+    background-image: url("../images/cubes.png");
     padding: 0 0 30px 0;
     border-radius: 5px;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    display: block;
-    background: rgba(200,200,200,0.4);
-    z-index: 1000;
-}
-
-.navbar-brand {
-    width: 260px;
+h1 {
     text-align: center;
-}
-
-#branding {
-    color: #3070A9;
-    font-size: 1.3em;
-    font-weight: bold;
+    margin: 0 0 30px 0;
+    font-family: 'Allerta', sans-serif;
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #7EB8E8),
+            color-stop(0.3, #3070A9)
+    );
+    background-image: -o-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: -moz-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: -webkit-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: -ms-linear-gradient(bottom, #7EB8E8 0%, #3070A9 30%);
+    background-image: linear-gradient(to bottom, #7EB8E8 0%, #3070A9 30%);    color: #fff;
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
 }
 
 h2 {
-    margin-top: 15px;
-    font-size: 1.3em;
-    height: 20px;
     text-align: center;
     color: #3070A9;
+}
+
+/*-- spacer */
+.spacer {
+    height: 30px;
 }
 
 /*--- page forms --*/
 form {
     padding: 10px;
-    margin: 20px 30px;
-    min-width: 270px;
+    margin: 0 10px 0 30px;
+    width: 400px;
     float: left;
     border: 3px solid #3070A9;
     border-radius: 10px;
@@ -86,11 +87,15 @@ label {
 }
 
 /*-- listing boxes --*/
+ul {
+    margin-left: 40px;
+}
 
- #listing ul {
-    margin: 20px 0 0 30px;
-    float: left;
-    width: 284px;
+li{
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.1);
 }
 
 .list-group button {
@@ -104,24 +109,3 @@ label {
 .close:hover {
     color: red;;
 }
-
-#submit {
-    height: 40px;
-    width: 100%;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-footer p {
-    color: #fff;
-    text-align: center;
-    line-height: 2;
-    background: #4d4d4d;
-}
-
-@media (max-width: 768px){
-    h2 {
-        visibility: hidden;
-    }
-} 
-

@@ -1,34 +1,20 @@
 <!-- Studio Tracker
     Author: Eric Rogers -->
-<header>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand glyphicon glyphicon-globe" id="branding" href="#"> WebStudioAdmin</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-     <ul class="nav navbar-nav">
-        <li><a class="glyphicon glyphicon-user" href="#/view1/Clients"> Clients</a></li>
-        <li class="active"><a class="glyphicon glyphicon-file" href="#/view2/Projects"> Projects</a></li>
-        <li><a class="glyphicon glyphicon-info-sign" href="#/view3/Team"> Team</a></li>
+<nav class="col-md-5">
+    <ul class="nav nav-pills">
+        <li><a href="#/view1/Clients">Clients</a></li>
+        <li class="active"><a href="#/view2/Projects">Projects</a></li>
+        <li><a href="#/view3/Team">Team</a></li>
     </ul>
-    <h2>{{ page }} Directory</h2>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+
 </nav>
-</header>
+
+<h2 class="col-md-6">{{ page }} Directory</h2>
+
 <div class="spacer"></div> <!-- spacer -->
 
-<form name="projects_form" class="col-md-3"> <!-- start of the Projects form -->
+<form name="projects_form" class="col-md-4"> <!-- start of the Projects form -->
     <fieldset>
         <legend>Add a Project</legend>
         <div class="form-group">
@@ -40,13 +26,15 @@
             <textarea class="form-control" id="pDescription" rows="3"
                       ng-model="pDescription" placeholder="Description" required></textarea>
         </div>
-        <button id="submit" type="submit" class="btn btn-primary" ng-click="addProject()">Add +</button>
+        <button type="submit" class="btn btn-primary" ng-click="addProject()">Add</button>
     </fieldset>
 </form> <!-- end of Projects form -->
-<div id="listing">
+
+<div class="spacer"></div> <!-- spacer -->
+
 <ul class="list-group col-md-3" ng-repeat="project in projects track by $index"> <!-- start of the projects listing -->
     <li class="list-group-item list-group-item-info">
-        <span class="glyphicon glyphicon-file"></span>
+        <span class="glyphicon glyphicon-tasks"></span>
         {{ project.pName }}
         <button type="button" class="close" aria-hidden="true" ng-click="deleteProject(project)">&times;</button>
     </li>
@@ -54,4 +42,3 @@
         <p>{{ project.pDescription }}</p>
     </li>
 </ul> <!-- end of the projects listing -->
-</div>
