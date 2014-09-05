@@ -5,9 +5,9 @@
 
 /*--- site wide styles --*/
 body {
-    min-height: 1000px;
+    /*background: linear-gradient(rgba(0,0,0,0) 60%, rgba(25,25,25,1)), url(../images/dark_fish_skin.png);*/
     font-family: 'Source Sans Pro', sans-serif;
-    background: linear-gradient(rgba(255,255,255,0.8) 50%, rgba(200,200,200,.5)), url(../images/noise_bg.png);
+    background: linear-gradient(rgba(255,255,255,0.6) 50%, rgba(217,237,247,0.8)), url(../images/noise_bg.png);
 }
 
 .container {
@@ -15,7 +15,6 @@ body {
     margin-top: 100px;
     padding: 0 0 30px 0;
     border-radius: 5px;
-    box-shadow: 0 3px 5px #999;
 }
 
 header {
@@ -40,8 +39,6 @@ header {
 }
 
 h2 {
-    float: right;
-    width: 300px;
     margin-top: 15px;
     font-size: 1.3em;
     height: 20px;
@@ -50,8 +47,7 @@ h2 {
 }
 
 /*--- page forms --*/
-
-#sidebar {
+form {
     padding: 10px;
     margin: 20px 30px;
     min-width: 270px;
@@ -59,38 +55,10 @@ h2 {
     border: 3px solid #3070A9;
     border-radius: 10px;
     background: #fff;
-    min-height: 500px;
 }
 
-#sidebar .panel {
-    margin: 0;
-}
-
-#sidebar .date {
-    border-bottom: 2px solid rgba(200,200,200,0.3);
-    padding-bottom: 10px;
-    margin: 0 0 20px 0;
-    text-align: center;
+legend {
     color: #4d4d4d;
-}
-
-#sidebar h3 {
-    text-align: left;
-    font-size: 1.5em;
-}
-
-#sidebar h3 span {
-    padding-left: 20px;
-}
-
-#sidebar a {
-    color: #428bca;
-}
-
-form {
-    clear: both;
-    float: left;
-    width: 100%;
 }
 
 label {
@@ -142,7 +110,6 @@ label {
     width: 100%;
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 30px;
 }
 
 footer p {
@@ -150,14 +117,11 @@ footer p {
     text-align: center;
     line-height: 2;
     background: #4d4d4d;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-@media (max-width: 882px){
+@media (max-width: 768px){
     h2 {
-        display: none;
+        visibility: hidden;
     }
 } 
 

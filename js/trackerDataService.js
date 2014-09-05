@@ -46,7 +46,7 @@ angular.module('tracker').service('trackerDataService', function(){
             pDescription: "An e-commerce website that allows the client to sell various items, and allow trade-ins."
         }
     ];
-    
+
     // Clients Methods ===========>
     this.getClients = function(){
         var str = localStorage.getItem('NameLS');
