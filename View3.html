@@ -1,46 +1,5 @@
 <!-- Studio Tracker
     Author: Eric Rogers -->
-<header>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand glyphicon glyphicon-globe" id="branding" href="#"> WebStudioAdmin</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a class="glyphicon glyphicon-user" href="#/view1/Clients"> Clients</a></li>
-        <li><a class="glyphicon glyphicon-file" href="#/view2/Projects"> Projects</a></li>
-        <li class="active"><a class="glyphicon glyphicon-info-sign" href="#/view3/Team"> Team</a></li>
-    </ul>
-    <h2>{{ page }} Directory</h2>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</header>
-
-<form name="teamMember_form"  class="col-md-3"> <!-- start of the Team Member form -->
-    <fieldset>
-        <legend>Add a Team Member</legend>
-        <div class="form-group">
-            <label for="name">Team Member Name:</label>
-            <input type="text" class="form-control" id="name" ng-model="name" placeholder="Team Member Name" required>
-        </div>
-        <div class="form-group">
-            <label for="job">Position:</label>
-            <input type="text" class="form-control" id="job" ng-model="job" placeholder="Position" required>
-        </div>
-        <button id="submit" type="submit" class="btn btn-primary" ng-click="addTeamMember()">Add +</button>
-    </fieldset>
-</form> <!-- end of Team Member form -->
 
 <div id="listing">
 <ul class="list-group col-md-3" ng-repeat="name in teamMembers track by $index"> <!-- start of team member listings -->

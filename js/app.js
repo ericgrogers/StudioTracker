@@ -21,20 +21,33 @@ angular.module('tracker',['ngRoute'])
 
     })
 
-    // View 1 Controller
-    .controller('View1Ctrl', function($scope, $routeParams,trackerDataService){
+    // Main Controller
+    .controller('MainCtrl', function($scope, $routeParams,trackerDataService){
+        //====== Clients ===========>
         $scope.name;
         $scope.street;
         $scope.city;
         $scope.state;
         $scope.zipCode;
+    
+        //====== Projects =========>
+        $scope.pName;
+        $scope.pDescription;
+    
+        //====== Team Members =====>
+        $scope.name;
+        $scope.job;
+    
+        $scope.date = new Date();
 
         // grab the current view route params
-        $scope.page = $routeParams.clients;
+        $scope.page;
+        $routeParams.clients ? $scope.page = $routeParams.clients : $routeParams.projects ? $scope.page = $routeParams.projects : $scope.page = $routeParams.team
+        
 
         // List Clients
         $scope.clients = trackerDataService.getClients();
-
+        
         // Add Client
         $scope.addClient = function(){
             trackerDataService.addClient($scope, $scope.name,  $scope.street, $scope.city, $scope.state, $scope.zipCode);
@@ -43,13 +56,17 @@ angular.module('tracker',['ngRoute'])
         // Delete Client
         $scope.deleteClient = function(cName){
             trackerDataService.deleteClient(cName);
-        }
+            $scope.clientCount = $scope.clients.length;
+        };
+    
+        
     })
 
     // View 2 Controller
     .controller('View2Ctrl', function($scope, $routeParams,trackerDataService){
         $scope.pName;
         $scope.pDescription;
+        
 
         // grab the current view route params
         $scope.page = $routeParams.projects;
@@ -72,6 +89,7 @@ angular.module('tracker',['ngRoute'])
     .controller('View3Ctrl', function($scope, $routeParams, trackerDataService){
         $scope.name;
         $scope.job;
+        $scope.date = new Date();
 
         // grab the current view route params
         $scope.page = $routeParams.team;
